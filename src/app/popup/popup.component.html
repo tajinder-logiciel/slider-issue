@@ -1,0 +1,8 @@
+<ion-content>
+    <ion-slides pager="true" [options]="scope.slideOpts" style="height: 95%">
+        <ion-slide *ngFor="let img of scope.slider;let i = index">
+            {{i}}
+            <img [src]="img" (error)="$event.target.src = 'assets/images/download.png'" />
+        </ion-slide>
+    </ion-slides>
+</ion-content>

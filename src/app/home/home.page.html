@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-slides pager="true" [options]="slideOpts" style="height: 95%">
+        <ion-slide *ngFor="let img of slider;let i = index">
+            {{i}}
+            <img [src]="img" (error)="$event.target.src = 'assets/images/download.png'" />
+        </ion-slide>
+    </ion-slides>
+</ion-content>
